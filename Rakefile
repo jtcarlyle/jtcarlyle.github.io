@@ -1,7 +1,10 @@
 # Based on the following
 # https://blog.sorryapp.com/blogging-with-jekyll/2014/01/31/using-jekyll-plugins-on-github-pages.html
+# https://gist.github.com/DirtyF/2eacfb7ecec18b3b738af1c3c8d1fe5e
 # Require jekyll to compile the site.
 require "jekyll"
+require "tmpdir"
+require "bundler/setup"
 
 # Github pages publishing.
 namespace :blog do

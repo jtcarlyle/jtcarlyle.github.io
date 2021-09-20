@@ -39,11 +39,13 @@ plugins:
 markdown: Pandoc
 
 # extra options for pandoc
+# the pandoc packages for ubuntu are hideously out of date
+# so install from github, see here:
+# https://stackoverflow.com/questions/61100045/how-to-install-stable-and-fresh-pandoc-on-ubuntu
 pandoc:
   extensions:
-    # - normalize
-    # - smart
     - mathjax
+    - citeproc
     - csl: "_styles/chicago-author-date-cjk.csl"
     - bibliography: "bibliography/test_refs.json"
 

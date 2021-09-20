@@ -33,6 +33,19 @@ github_username:  jekyll
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-pandoc
+
+# change the markdown interpretter
+markdown: Pandoc
+
+# extra options for pandoc
+pandoc:
+  extensions:
+    # - normalize
+    # - smart
+    - mathjax
+    - csl: "_styles/chicago-author-date-cjk.csl"
+    - bibliography: "bibliography/test_refs.json"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

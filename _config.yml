@@ -19,35 +19,42 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Your awesome title
-email: your-email@example.com
+email: jtcarlyl@uw.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: ""
+github_username:  jtcarlyle
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-pandoc
+  - jekyll-scholar
+  - ./_plugins/cjknames
+  # - jekyll-pandoc
+
+scholar:
+  style: ./_styles/chicago-author-date-cjk.csl
+  bibliography: test_refs.bib
+  # raw_bibtex_filters: :cjknames
 
 # change the markdown interpretter
-markdown: Pandoc
+# markdown: Pandoc
 
 # extra options for pandoc
 # the pandoc packages for ubuntu are hideously out of date
 # so install from github, see here:
 # https://stackoverflow.com/questions/61100045/how-to-install-stable-and-fresh-pandoc-on-ubuntu
-pandoc:
-  extensions:
-    - mathjax
-    - citeproc
-    - csl: "_styles/chicago-author-date-cjk.csl"
-    - bibliography: "bibliography/test_refs.json"
+# pandoc:
+#   extensions:
+#     - mathjax
+#     - citeproc
+#     - csl: "_styles/chicago-author-date-cjk.csl"
+#     - bibliography: "bibliography/test_refs.json"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -1,0 +1,13 @@
+# require 'bibtex'
+
+p "Loaded CJKNames"
+
+module BibTeX
+    module Filters
+      class CjkNames < Filter
+        def apply(value)
+          value.to_s.gsub(/family=(.+?)\s*,\s*given=(.+?)\s*,\s*cjk=()(.+?)\s*,\s*nametemplates=cjk/, '\1, \3, \2')
+        end
+      end
+    end
+  end

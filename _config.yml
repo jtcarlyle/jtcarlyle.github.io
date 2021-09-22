@@ -34,27 +34,9 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-scholar
-  - ./_plugins/cjknames
-  # - jekyll-pandoc
 
 scholar:
   style: ./_styles/chicago-author-date-cjk.csl
-  bibliography: test_refs.bib
-  # raw_bibtex_filters: :cjknames
-
-# change the markdown interpretter
-# markdown: Pandoc
-
-# extra options for pandoc
-# the pandoc packages for ubuntu are hideously out of date
-# so install from github, see here:
-# https://stackoverflow.com/questions/61100045/how-to-install-stable-and-fresh-pandoc-on-ubuntu
-# pandoc:
-#   extensions:
-#     - mathjax
-#     - citeproc
-#     - csl: "_styles/chicago-author-date-cjk.csl"
-#     - bibliography: "bibliography/test_refs.json"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -116,7 +116,12 @@
   </macro>
   <macro name="contributors">
     <choose>
-        <if variable="cjk-title">
+        <if variable="cjktitle">
+        <!-- This unfortunately does not handle by language per author name -->
+        <!-- non-cjk authors on a cjk publication (like Zev) will have their names in the wrong order -->
+        <!-- The CSL people hardcoded name handling by script, leaving no way to properly handle EA names written in Latin script -->
+        <!-- Seems like a huge oversight and makes name formatting incorrect for all EA people on English publications, too -->
+        <!-- e.g., the offical way Japanese names are rendered in English now is Family Given, no comma delimiter (because it is not reversed) -->
             <group delimiter=". ">
                 <names variable="author">
                     <name and="text" name-as-sort-order="all" sort-separator=" " delimiter=", " delimiter-precedes-last="always"/>
@@ -260,7 +265,8 @@
         <text variable="title" text-case="title" quotes="true"/>
       </else>
     </choose>
-    <text variable="cjk-title" prefix=" "/>
+    <text variable="cjktitle" prefix=" "/>
+    <text variable="titleaddon" prefix=" "/>
   </macro>
   <macro name="edition">
     <choose>
